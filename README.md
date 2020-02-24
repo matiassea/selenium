@@ -53,7 +53,7 @@ driver.switch_to.default_content()
 driver.switch_to.parent_frame()
 
 ```
-#### Se recomienda buscar frame, esperando la aparicion de este elemento.
+##### Se recomienda buscar frame, esperando la aparicion de este elemento.
 
 As per the best practices while switching to an iframe you need to induce WebDriverWait as follows:
 
