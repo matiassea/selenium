@@ -19,11 +19,11 @@ https://www.w3schools.com/tags/ref_attributes.asp
 https://stackoverflow.com/questions/47770144/how-can-i-select-a-html-element-no-matter-what-frame-it-is-in-in-selenium/47771879#47771879
 
 
-#### Reason :
+##### Reason :
 
 When a page is loaded, Selenium's focus by default remains on the Top Window. The Top Window contains the other iframes and the framesets. So when we need to interact with a WebElement which is within an iframe we have to switch to the respective iframe through one of the below-mentioned methods :
 
-#### Frame Switching Methods :
+##### Frame Switching Methods :
 
 We can switch over to frames by 3 ways.
 
@@ -78,13 +78,13 @@ What is Gecko and GeckoDriver? Gecko is a web browser engine used in many applic
 5. Note down whether Firefox is 32 or 64 bit. For us, Firefox is 64-bit as shown in the above image. Now close this popup and close Firefox as well.
 
 
-Download the latest version of Selenium Geckodriver
+#### Download the latest version of Selenium Geckodriver
 
 1. Open this Github page – https://github.com/mozilla/geckodriver/releases
 2. Download the latest release (windows version) based on whether your Firefox is 32-bit or 64-bit. We are downloading geckodriver-v0.20.1-win64.zip, as we have 64-bit Firefox
 3. Once the zip file is downloaded, unzip it to retrieve the driver – geckodriver.exe
 
-Launch Firefox Method 2 : Set property in Environment Variables
+#### Launch Firefox Method 2 : Set property in Environment Variables
 1. Copy the entire folder location where geckodriver.exe is saved. If the entire path is D:\Firefox\geckodriver.exe, then the folder location would be D:\Firefox\
 2. Open Advanced tab in System Properties window as shown in below image.
 3. Open Environment Variables window. 
