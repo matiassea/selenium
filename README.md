@@ -64,7 +64,7 @@ WebDriverWait(driver, 10).until(EC.frame_to_be_available_and_switch_to_it(By.XPA
 WebDriverWait(driver, 10).until(EC.frame_to_be_available_and_switch_to_it(By.CSS_SELECTOR,"css_of_iframe"))
 ```
 
-### Instalacion de Geckodriver
+#### Instalacion de Geckodriver
 
 http://www.automationtestinghub.com/selenium-3-0-launch-firefox-with-geckodriver/
 
@@ -78,13 +78,13 @@ What is Gecko and GeckoDriver? Gecko is a web browser engine used in many applic
 5. Note down whether Firefox is 32 or 64 bit. For us, Firefox is 64-bit as shown in the above image. Now close this popup and close Firefox as well.
 
 
-#### Download the latest version of Selenium Geckodriver
+##### Download the latest version of Selenium Geckodriver
 
 1. Open this Github page – https://github.com/mozilla/geckodriver/releases
 2. Download the latest release (windows version) based on whether your Firefox is 32-bit or 64-bit. We are downloading geckodriver-v0.20.1-win64.zip, as we have 64-bit Firefox
 3. Once the zip file is downloaded, unzip it to retrieve the driver – geckodriver.exe
 
-#### Launch Firefox Method 2 : Set property in Environment Variables
+##### Launch Firefox Method 2 : Set property in Environment Variables
 1. Copy the entire folder location where geckodriver.exe is saved. If the entire path is D:\Firefox\geckodriver.exe, then the folder location would be D:\Firefox\
 2. Open Advanced tab in System Properties window as shown in below image.
 3. Open Environment Variables window. 
@@ -93,4 +93,33 @@ What is Gecko and GeckoDriver? Gecko is a web browser engine used in many applic
 6. Click on Ok button to close the windows. Once the path is set, you would not need to set the System property every time in the test script. Your test script would simply look like this – 
 7. Run the code to check that it works fine.
 
+
+#### Click on element using selenium python which is under label class
+
+https://stackoverflow.com/questions/49517810/click-on-element-using-selenium-python-which-is-under-label-class
+
+Se necesita hacer click en onclick="">%</label>
+```
+<div class="dv-widget dv-deco-def dv-sz-med dv-map-sw">
+<input name="l_maps" id="grp_perc" value="0" class="map_HD dv-radio-swr" type="radio">
+<label for="grp_percentage" class="dv-radio-swl" onclick="">%</label>
+<input name="l_maps" id="grp_count" value="1" class="map_HD dv-radio-swr" checked="" type="radio">
+<label for="grp_multiply" class="dv-radio-swl" onclick="">*</label></div>
+
+```
+
+Using preceding
+```
+driver.find_element_by_xpath("//label[@class='dv-radio-swl' and @for='grp_percentage']//preceding::input[1]").click()
+```
+
+Using preceding-sibling
+```
+driver.find_element_by_xpath("//label[@class='dv-radio-swl' and @for='grp_percentage']//preceding-sibling::input[1]").click()
+```
+
+Using ancestor
+```
+driver.find_element_by_xpath("//label[@class='dv-radio-swl' and @for='grp_percentage']//ancestor::input[1]").click()
+```
 
