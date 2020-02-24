@@ -1,4 +1,4 @@
-# selenium
+# Selenium
 General information about Selenium
 https://selenium-python.readthedocs.io/
 
