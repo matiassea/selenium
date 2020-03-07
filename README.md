@@ -124,3 +124,25 @@ Using ancestor
 driver.find_element_by_xpath("//label[@class='dv-radio-swl' and @for='grp_percentage']//ancestor::input[1]").click()
 ```
 
+
+#### get_attribute
+
+
+https://selenium-python.readthedocs.io/api.html#selenium.webdriver.remote.webelement.WebElement.get_attribute
+
+https://stackoverflow.com/questions/30324760/how-to-get-attribute-of-element-from-selenium
+
+https://www.w3schools.com/tags/ref_attributes.asp
+
+https://stackoverflow.com/questions/30324760/how-to-get-attribute-of-element-from-selenium
+
+
+
+```
+element.get_attribute('value')
+attribute_value = WebDriverWait(driver, 20).until(EC.visibility_of_element_located((By.ID, "org"))).get_attribute("attribute_name")
+element.get_attribute("attribute name")
+
+```
+![Get_attribute](https://user-images.githubusercontent.com/17385297/76143861-95373300-6059-11ea-927d-e407624c0ba4.JPG)
+
