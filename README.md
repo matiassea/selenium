@@ -65,6 +65,16 @@ WebDriverWait(driver, 10).until(EC.frame_to_be_available_and_switch_to_it(By.XPA
 WebDriverWait(driver, 10).until(EC.frame_to_be_available_and_switch_to_it(By.CSS_SELECTOR,"css_of_iframe"))
 ```
 
+#### Instalacion Geckodriver
+
+version v.0.20.1
+https://github.com/mozilla/geckodriver/releases/download/v0.20.1/geckodriver-v0.20.1-win64.zip
+
+version v0.26.1
+https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-win64.zip
+
+despues dejar en path
+
 #### Instalacion de Geckodriver
 
 http://www.automationtestinghub.com/selenium-3-0-launch-firefox-with-geckodriver/
